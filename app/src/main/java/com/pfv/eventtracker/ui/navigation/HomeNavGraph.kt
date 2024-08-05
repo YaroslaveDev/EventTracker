@@ -12,6 +12,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
 import com.pfv.eventtracker.ui.navigation.consts.Routes
+import com.pfv.eventtracker.ui.screens.home.HomeScreen
+import com.pfv.eventtracker.ui.screens.home_details.HomeDetailsScreen
 
 @Composable
 fun HomeNavGraph(
@@ -29,17 +31,9 @@ fun HomeNavGraph(
 
             composable<Routes.HomeScreen>() {
 
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize(),
-                    contentAlignment = Alignment.Center
-                ){
-                    Button(onClick = {
-                        navHostController.navigate(Routes.HomeDetailsNavGraph)
-                    }) {
-                        Text(text = "rrrrr")
-                    }
-                }
+                HomeScreen(
+                    navController = navHostController
+                )
             }
 
             composable<Routes.CalendarScreen>{
@@ -72,13 +66,21 @@ fun HomeNavGraph(
 
             composable<Routes.HomeDetailsDeeperScreen> {
                // HomeDetailsScreen(navController = navHostController)
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize(),
-                    contentAlignment = Alignment.Center
-                ){
-                    Text(text = "HomeDetailsDeeperScreen")
-                }
+//                Box(
+//                    modifier = Modifier
+//                        .fillMaxSize(),
+//                    contentAlignment = Alignment.Center
+//                ){
+//                    HomeDetailsScreen(
+//                        text = "",
+//                        navController = navHostController
+//                    )
+//                }
+                HomeDetailsScreen(
+                    text = "",
+                    navController = navHostController
+                )
+
             }
         }
     }
