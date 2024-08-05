@@ -23,7 +23,7 @@ private val DarkColorScheme = darkColorScheme(
     error = ErrorLight,
     primaryContainer = PrimaryContainerLight,
     secondaryContainer = SecondaryContainerLight,
-    tertiaryContainer = TertiaryContainerLight
+    tertiaryContainer = TertiaryContainerLight,
 )
 
 private val LightColorScheme = lightColorScheme(

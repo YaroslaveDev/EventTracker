@@ -14,7 +14,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.pfv.eventtracker.ui.screens.home.components.InfoSectionItem
 
 @Composable
 fun HomeDetailsScreen(
@@ -42,37 +41,37 @@ fun HomeDetailsScreen(
                     .padding(horizontal = 20.dp),
                 horizontalArrangement = Arrangement.spacedBy(12.dp)
             ) {
-                InfoSectionItem(
-                    modifier = Modifier
-                        .weight(1f),
-                    info = "0/10",
-                    title = "First",
-                    onClick = {}
-                )
-
-                InfoSectionItem(
-                    modifier = Modifier
-                        .weight(1f),
-                    info = "220$",
-                    title = "Second",
-                    onClick = {}
-                )
-
-                InfoSectionItem(
-                    modifier = Modifier
-                        .weight(1f),
-                    info = "3/4",
-                    title = "Third",
-                    onClick = {}
-                )
-
-                InfoSectionItem(
-                    modifier = Modifier
-                        .weight(1f),
-                    info = "15",
-                    title = "Fourth",
-                    onClick = {}
-                )
+//                InfoSectionItem(
+//                    modifier = Modifier
+//                        .weight(1f),
+//                    info = "0/10",
+//                    title = "First",
+//                    onClick = {}
+//                )
+//
+//                InfoSectionItem(
+//                    modifier = Modifier
+//                        .weight(1f),
+//                    info = "220$",
+//                    title = "Second",
+//                    onClick = {}
+//                )
+//
+//                InfoSectionItem(
+//                    modifier = Modifier
+//                        .weight(1f),
+//                    info = "3/4",
+//                    title = "Third",
+//                    onClick = {}
+//                )
+//
+//                InfoSectionItem(
+//                    modifier = Modifier
+//                        .weight(1f),
+//                    info = "15",
+//                    title = "Fourth",
+//                    onClick = {}
+//                )
             }
         }
     }

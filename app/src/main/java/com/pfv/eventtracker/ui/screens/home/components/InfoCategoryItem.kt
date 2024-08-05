@@ -1,8 +1,11 @@
 package com.pfv.eventtracker.ui.screens.home.components
 
-import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -12,24 +15,24 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.pfv.eventtracker.ui.theme.IconColor
 
 @Composable
-fun InfoSectionItem(
+fun InfoCategoryItem(
     modifier: Modifier,
+    img: Int,
     title: String,
-    value: String,
-    onClick: () -> Unit
+    value: String
 ) {
 
     Card(
         modifier = modifier
             .fillMaxWidth(),
-        onClick = onClick,
         shape = RoundedCornerShape(4.dp),
         colors = CardDefaults.cardColors(
             containerColor = Color.White
@@ -40,40 +43,37 @@ fun InfoSectionItem(
         ),
     ) {
 
-        Column(
+        Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding()
-                .padding(16.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
+                .padding(10.dp),
+            verticalAlignment = Alignment.CenterVertically
         ) {
 
-
-            Text(
-                modifier = Modifier,
-                text = value,
-                color = MaterialTheme.colorScheme.onSurface,
-                textAlign = TextAlign.Center,
-                fontWeight = FontWeight.Bold,
-                fontSize = 18.sp,
-                lineHeight = 26.sp
+            Image(
+                painter = painterResource(id = img),
+                contentDescription = "img",
+                colorFilter = ColorFilter.tint(IconColor)
             )
 
+            Spacer(modifier = Modifier.width(10.dp))
+
             Text(
-                modifier = Modifier,
                 text = title,
-                color = MaterialTheme.colorScheme.tertiary,
-                textAlign = TextAlign.Center,
-                fontSize = 14.sp,
-                lineHeight = 22.sp
+                color = MaterialTheme.colorScheme.onSurface,
+                fontSize = 16.sp
+            )
+
+            Spacer(modifier = Modifier.width(10.dp))
+
+            Text(
+                modifier = Modifier
+                    .weight(1f),
+                text = value,
+                color = MaterialTheme.colorScheme.onSurface,
+                fontSize = 16.sp,
+                textAlign = TextAlign.Start
             )
         }
     }
-}
-
-@Preview
-@Composable
-fun InfoSectionItem_Preview() {
-
-
 }

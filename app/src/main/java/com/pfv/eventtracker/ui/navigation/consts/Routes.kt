@@ -34,13 +34,9 @@ sealed class Routes {
     data object HomeDetailsDeeperScreen : Routes()
 }
 
-@Serializable
 sealed class BottomNavigationRoutes(val route: Routes, val icon: Int) {
 
-    @Serializable
     data object HomeScreen : BottomNavigationRoutes(Routes.HomeScreen, R.drawable.ic_home)
-    @Serializable
-    data object CalendarScreen : BottomNavigationRoutes(Routes.CalendarScreen, R.drawable.ic_history)
-    @Serializable
+    data object CalendarScreen : BottomNavigationRoutes(Routes.CalendarScreen, R.drawable.ic_calendar)
     data object EventsHistoryScreen : BottomNavigationRoutes(Routes.DictionaryScreen, R.drawable.ic_history)
 }

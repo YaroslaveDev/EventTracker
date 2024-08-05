@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">EventTracker</string>
+
+    <string name="financial_summary">Financial Summary</string>
+    <string name="spent_by_category">Spent By Category</string>
+    <string name="alcohol">Alcohol</string>
+    <string name="food">Food</string>
+    <string name="shopping">Shopping</string>
 </resources>
