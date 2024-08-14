@@ -3,6 +3,8 @@ plugins {
     id("org.jetbrains.kotlin.android")
     kotlin("plugin.serialization")
     id("kotlin-parcelize")
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -32,11 +34,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_19
-        targetCompatibility = JavaVersion.VERSION_19
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "19"
+        jvmTarget = "1.8"
     }
     buildFeatures {
         compose = true
@@ -76,4 +78,25 @@ dependencies {
 
     //Navigation
     implementation("androidx.navigation:navigation-compose:$nav_version")
+
+    //Custom calendar
+    implementation("io.github.boguszpawlowski.composecalendar:composecalendar:1.3.0")
+
+    implementation ("com.itextpdf:itextg:5.5.10")
+    implementation ("com.itextpdf:itext7-core:7.1.14")
+    implementation ("com.itextpdf:layout:7.1.14")
+    implementation ("dev.shreyaspatil:capturable:1.0.3")
+
+    //Flip Animation
+    implementation("com.wajahatkarim:flippable:1.5.4")
+
+    //Accompanist
+    implementation("com.google.accompanist:accompanist-permissions:0.31.3-beta")
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.32.0")
+    implementation("com.google.accompanist:accompanist-insets:0.30.1")
+
+    //Hilt
+    implementation("com.google.dagger:hilt-android:2.49")
+    kapt("com.google.dagger:hilt-compiler:2.48.1")
+
 }

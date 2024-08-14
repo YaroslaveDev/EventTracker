@@ -7,6 +7,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.pfv.eventtracker.ui.navigation.consts.Routes
+import com.pfv.eventtracker.ui.screens.home.HomeScreen
 import com.pfv.eventtracker.ui.screens.splash.SplashScreen
 
 @Composable
@@ -38,8 +39,12 @@ fun RootNavGraph(
             )
         }
 
-        composable<Routes.MainNavGraph> {
-            MainNavGraph()
+        composable<Routes.HomeScreen> {
+            HomeScreen(navController = navController)
         }
+
+//        composable<Routes.MainNavGraph> {
+//            MainNavGraph()
+//        }
     }
 }

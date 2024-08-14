@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -46,14 +45,14 @@ fun HomeScreenTopBar(
             fontWeight = FontWeight.SemiBold
         )
 
-        Text(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp),
-            text = "Skjfknefnkefknnefnkefnlkvnsdlvns;dvjn;lkn;lknensl;eeiieiei",
-            color = MaterialTheme.colorScheme.onSurface,
-            fontSize = 14.sp,
-        )
+//        Text(
+//            modifier = Modifier
+//                .fillMaxWidth()
+//                .padding(horizontal = 16.dp),
+//            text = "Skjfknefnkefknnefnkefnlkvnsdlvns;dvjn;lkn;lknensl;eeiieiei",
+//            color = MaterialTheme.colorScheme.onSurface,
+//            fontSize = 14.sp,
+//        )
     }
 
 

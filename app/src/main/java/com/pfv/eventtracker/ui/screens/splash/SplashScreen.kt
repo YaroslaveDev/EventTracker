@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
@@ -20,6 +21,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -46,7 +49,7 @@ fun SplashScreen(
         firstAnimationFlag = true
         secondAnimationFlag = true
         delay(3000)
-        navController.navigate(Routes.MainNavGraph)
+        navController.navigate(Routes.HomeScreen)
     }
 
     val rotation1 by animateFloatAsState(
@@ -86,7 +89,7 @@ fun SplashScreen(
                         .padding(16.dp),
                     painter = painterResource(id = R.drawable.ic_splash_logo_outside_2),
                     contentDescription = "img",
-                    colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.onSurface),
+                    colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.primary),
                     contentScale = ContentScale.Inside
                 )
 
@@ -99,7 +102,7 @@ fun SplashScreen(
                         .padding(16.dp),
                     painter = painterResource(id = R.drawable.ic_splash_logo_outside_1),
                     contentDescription = "img",
-                    colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.onSurface),
+                    colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.primary),
                     contentScale = ContentScale.Inside
                 )
 
@@ -109,7 +112,7 @@ fun SplashScreen(
                         .padding(16.dp),
                     painter = painterResource(id = R.drawable.ic_splash_logo_center),
                     contentDescription = "img",
-                    colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.onSurface),
+                    colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.primary),
                     contentScale = ContentScale.Inside
                 )
             }

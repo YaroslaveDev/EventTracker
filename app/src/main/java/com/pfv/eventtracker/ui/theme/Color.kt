@@ -11,7 +11,8 @@ val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
 
 //Light Theme
-val PrimaryLight = Color(0xFF17C6ED)
+val PrimaryLight = Color(0xFF474972 )
+//val PrimaryLight = Color(0xFF17C6ED)
 val SecondaryLight = Color(0xFF616042)
 val TertiaryLight = Color(0xFF8A8EAA)
 val ErrorLight = Color(0xFFba1a1a)
