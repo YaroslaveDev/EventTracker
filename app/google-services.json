@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "652607490132",
+    "project_id": "event-tracker-a31af",
+    "storage_bucket": "event-tracker-a31af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:652607490132:android:1c49b143f0dfd9b01305c1",
+        "android_client_info": {
+          "package_name": "com.pfv.eventtracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJuEWSX7_DjEz-zOy21BVrha8AzevbE_M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

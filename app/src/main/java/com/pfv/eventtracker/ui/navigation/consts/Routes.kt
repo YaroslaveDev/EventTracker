@@ -32,6 +32,12 @@ sealed class Routes {
 
     @Serializable
     data object HomeDetailsDeeperScreen : Routes()
+
+    @Serializable
+    data object ManageEventsScreenRoute : Routes()
+
+    @Serializable
+    data object CreateNewEventScreenRoute : Routes()
 }
 
 sealed class BottomNavigationRoutes(val route: Routes, val icon: Int) {

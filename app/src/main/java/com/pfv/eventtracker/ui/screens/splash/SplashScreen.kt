@@ -49,7 +49,9 @@ fun SplashScreen(
         firstAnimationFlag = true
         secondAnimationFlag = true
         delay(3000)
-        navController.navigate(Routes.HomeScreen)
+        navController.navigate(Routes.HomeScreen){
+            popUpTo(0)
+        }
     }
 
     val rotation1 by animateFloatAsState(

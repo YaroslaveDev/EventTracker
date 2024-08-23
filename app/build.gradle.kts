@@ -5,6 +5,7 @@ plugins {
     id("kotlin-parcelize")
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -57,6 +58,7 @@ dependencies {
 
     val nav_version = "2.8.0-beta06"
 
+    implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.3")
     implementation("androidx.activity:activity-compose:1.9.0")
@@ -98,5 +100,5 @@ dependencies {
     //Hilt
     implementation("com.google.dagger:hilt-android:2.49")
     kapt("com.google.dagger:hilt-compiler:2.48.1")
-
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
 }

@@ -8,5 +8,6 @@
     <string name="shopping">Shopping</string>
     <string name="or">or</string>
     <string name="create_new_event">Create new event</string>
+    <string name="create_new_event_cap">Create New Event</string>
     <string name="join_to_event_by">Join to event by</string>
 </resources>

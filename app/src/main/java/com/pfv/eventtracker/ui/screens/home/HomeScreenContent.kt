@@ -63,7 +63,7 @@ fun HomeScreenContent(
                     .weight(1f),
                 text = stringResource(id = R.string.create_new_event),
                 onClick = {
-                    onEvent(HomeScreenEvent.CreateChat)
+                    onEvent(HomeScreenEvent.CreateNewEvent)
                 }
             )
 
@@ -75,7 +75,7 @@ fun HomeScreenContent(
                         shape = RoundedCornerShape(8.dp)
                     )
                     .clickable {
-                        onEvent(HomeScreenEvent.NavToChatsListScreen)
+                        onEvent(HomeScreenEvent.NavToManageEventsScreen)
                     },
                 contentAlignment = Alignment.Center
             ){
